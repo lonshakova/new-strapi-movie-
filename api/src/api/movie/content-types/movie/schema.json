@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "singularName": "movie",
+    "pluralName": "movies",
+    "displayName": "Movie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "movieLength": {
+      "type": "integer"
+    },
+    "alternativeName": {
+      "type": "string"
+    },
+    "watchability": {
+      "type": "json"
+    },
+    "poster": {
+      "type": "json"
+    },
+    "rating": {
+      "type": "json"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "releaseYears": {
+      "type": "json"
+    },
+    "type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::type.type",
+      "inversedBy": "movies"
+    }
+  }
+}
